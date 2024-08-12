@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'+%s')"
+        run: echo "::set-output name=date::$(date +'%s')"
 
 
       - name: Checkout repository

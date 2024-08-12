@@ -39,6 +39,9 @@ COPY --from=builder /invidious/invidious .
 
 RUN chmod o+rX -R ./assets ./config ./locales
 
+COPY run.sh /run.sh
+RUN chmod +x  /run.sh
+
 EXPOSE 3000
 USER invidious
-CMD [ "/invidious/invidious" ]
+CMD [ "/run.sh" ]

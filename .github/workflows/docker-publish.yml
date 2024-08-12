@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: Get current date
         id: date
-        run: echo "$(date +'%s')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%s')"
 
 
       - name: Checkout repository
